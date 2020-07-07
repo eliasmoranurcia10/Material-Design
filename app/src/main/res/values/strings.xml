@@ -5,5 +5,7 @@
 
     <string name="texto_titulo">Hello word !</string>
     <string name="texto_boton_click">Click</string>
+    <string name="mensaje">Favorito :)</string>
+    <string name="texto_accion">Accion</string>
 
 </resources>
