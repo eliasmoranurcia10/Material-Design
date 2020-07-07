@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorFondo"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,13 +32,14 @@
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/sfiMiIndicadorRefresh"
+            android:layout_below="@+id/petagrama"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/lista_height">
 
             <ListView
                 android:id="@+id/lstMiLista"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="@dimen/lista_height">
 
             </ListView>
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -64,6 +69,47 @@
             android:layout_below="@+id/btnMiBoton"
             android:id="@+id/fabMiFab"
             />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/card_medida"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fabMiFab"
+            card_view:cardCornerRadius="4dp"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgImagen"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pop" />
+
+                <TextView
+                    android:id="@+id/tvTituloTarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titulo_tarjeta"
+                    android:layout_below="@+id/imgImagen"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/card_titulo"
+                    />
+                
+                <TextView
+                    android:id="@+id/tvtDescripcionTarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/descripcion_tarjeta"
+                    android:layout_below="@+id/tvTituloTarjeta"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
 
     </RelativeLayout>
