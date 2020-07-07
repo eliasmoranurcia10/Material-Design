@@ -37,4 +37,15 @@
         android:theme="@style/MiBotonRaised"
         />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_popup_reminder"
+
+        android:layout_below="@+id/btnMiBoton"
+        android:id="@+id/fabMiFab"
+        />
+
+
 </RelativeLayout>
